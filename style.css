@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #111927;
+    color: #9fef00;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+button {
+    background-color: transparent;
+    color: #9fef00;
+    border: 1px solid #9fef00;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+    color: black;
+    background-color: #9fef00;
+}
+
+:root {
+    --board-width: 500px;
+    --n-rows: 10;
+}
+
+.container {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: var(--board-width);
+    color: white;
+}
+
+#board {
+    width: 90%;
+    max-width: var(--board-width);
+    aspect-ratio: 1;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(var(--n-rows), 1fr);
+    grid-template-rows: repeat(var(--n-rows), 1fr);
+    gap: 0.3em;
+}
+
+.cell {
+    /* height: 20px; */
+    aspect-ratio: 1;
+    background-color: #edd;
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+}
+
+.cell:hover {
+    background-color: blue;
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.beg {
+    background-color: skyblue;
+}
+
+.beg:hover {
+    background-color: skyblue;
+}
+
+.end {
+    background-color: #9fef00;
+}
+
+.end:hover {
+    background-color: #9fef00;
+}
+
+.visited:hover {
+    background-color: skyblue;
+}
+
+footer {
+    text-align: center;
+    color: #0086ff;
+    padding: 1rem;
+}
